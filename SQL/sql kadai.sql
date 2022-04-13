@@ -65,4 +65,3 @@ select * from sales where amount <= 5000;
 select * from sales where amount >= 5000;
 
 select * from sales where sales and amount * 1.1:
-
