@@ -12,23 +12,23 @@ student_id int primary key
 ,major_id int not null references major(major_id) );
 
 insert into major values
-(1, 'ï¿½pï¿½ï¿½ï¿½w'), (2, 'ï¿½ï¿½ï¿½pï¿½ÈŠw'), (3, 'ï¿½ï¿½ï¿½Hï¿½w'), (4, 'ï¿½oï¿½ÏŠw'), (5, 'ï¿½ï¿½ï¿½Û•ï¿½ï¿½ï¿½');
+(1, '‰p•¶Šw'), (2, '‰—p‰ÈŠw'), (3, 'î•ñHŠw'), (4, 'ŒoÏŠw'), (5, '‘Û•¶‰»');
 
 insert into student values
-(1,'ï¿½Rï¿½c', '1', 'ï¿½{ï¿½ï¿½','1'),
-(2, 'ï¿½cï¿½ï¿½', '1', 'ï¿½ï¿½ï¿½ï¿½','2'),
-(3,'ï¿½ï¿½ï¿½ï¿½', '1', 'ï¿½ï¿½ï¿½ï¿½', '3'),
-(4,'ï¿½ï¿½ï¿½', '2', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '1'),
-(5,'ï¿½ï¿½ï¿½ï¿½', '2', 'ï¿½kï¿½Cï¿½ï¿½', '2'),
-(6,'ï¿½gï¿½c', '2', 'ï¿½ï¿½ï¿½ï¿½','1'),
-(7,'ï¿½É“ï¿½', '3', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', '2'),
-(8,'ï¿½Rï¿½{', '3', 'ï¿½_ï¿½Şï¿½', '3'),
-(9,'ï¿½Xï¿½{', '4', 'ï¿½ï¿½ï¿½ï¿½', '4'),
-(10,'ï¿½gï¿½ï¿½', '4', 'ï¿½_ï¿½Şï¿½', '5');
+(1,'R“c', '1', '‹{é','1'),
+(2, '“c’†', '1', '“Œ‹','2'),
+(3,'²“¡', '1', '“Œ‹', '3'),
+(4,'—é–Ø', '2', '­™“‡', '1'),
+(5,'‚‹´', '2', '–kŠC“¹', '2'),
+(6,'‹g“c', '2', '“Œ‹','1'),
+(7,'ˆÉ“¡', '3', '­™“‡', '2'),
+(8,'R–{', '3', '_“Şì', '3'),
+(9,'X–{', '4', '‰«“ê', '4'),
+(10,'‹g‰ª', '4', '_“Şì', '5');
 
 select * from student where grade=1;
 
-select * from student where hometown='ï¿½ï¿½ï¿½ï¿½';
+select * from student where hometown='“Œ‹';
 
 select major_name from major;
 
@@ -51,17 +51,31 @@ sales_id int primary key
 ,amount decimal);
 
 insert into customer values
-(1,'ï¿½cï¿½ï¿½'), (2,'ï¿½ï¿½ï¿½'), (3,'ï¿½cï¿½ï¿½'), (4,'ï¿½cï¿½ï¿½');
+(1,'“c’†'), (2,'—é–Ø'), (3,'“c’†'), (4,'“c“‡');
 
 insert into sales values
 (1,'2018/11/01', '1', '3000'),
 (2,'2018/10/01', '3', '5000'),
 (3,'2018/10/01', '4', '6000'),
 (4,'2018/11/02', '2', '2000'),
-(5,'2018/11/15', '2', 'NULL');
+(5,'2018/11/15', '2', NULL);
 
-select * from sales where amount <= 5000;
+select * from sales where amount < 5000;
 
 select * from sales where amount >= 5000;
 
-select * from sales where sales and amount * 1.1:
+select sales_id, order_date, customer_id, 
+amount * 1.1 from sales;
+
+select sales_id, order_date, customer_id, amount
+from sales where amount > 0;
+
+select customer_id, customer_name
+from customer where customer_name != '“c’†';
+
+update sales
+   set order_date = '2018/11/05', customer_id = 4
+ where sales_id = 4;
+ 
+delete from sales
+where amount = null;
