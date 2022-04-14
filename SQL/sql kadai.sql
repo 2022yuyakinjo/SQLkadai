@@ -12,23 +12,23 @@ student_id int primary key
 ,major_id int not null references major(major_id) );
 
 insert into major values
-(1, '�p���w'), (2, '���p�Ȋw'), (3, '���H�w'), (4, '�o�ϊw'), (5, '���ە���');
+(1, '英文学'), (2, '応用科学'), (3, '情報工学'), (4, '経済学'), (5, '国際文化');
 
 insert into student values
-(1,'�R�c', '1', '�{��','1'),
-(2, '�c��', '1', '����','2'),
-(3,'����', '1', '����', '3'),
-(4,'���', '2', '������', '1'),
-(5,'����', '2', '�k�C��', '2'),
-(6,'�g�c', '2', '����','1'),
-(7,'�ɓ�', '3', '������', '2'),
-(8,'�R�{', '3', '�_�ސ�', '3'),
-(9,'�X�{', '4', '����', '4'),
-(10,'�g��', '4', '�_�ސ�', '5');
+(1,'山田', '1', '宮城','1'),
+(2,'田中', '1', '東京','2'),
+(3,'佐藤', '1', '東京', '3'),
+(4,'鈴木', '2', '鹿児島', '1'),
+(5,'高橋', '2', '北海道', '2'
+(6,'吉田', '2', '東京','1'),
+(7,'伊藤', '3', '鹿児島', '2'),
+(8,'山本', '3', '神奈川', '3'),
+(9,'森本', '4', '沖縄', '4'),
+(10,'吉岡', '4', '神奈川', '5');
 
 select * from student where grade=1;
 
-select * from student where hometown='����';
+select * from student where hometown='東京';
 
 select major_name from major;
 
@@ -51,7 +51,7 @@ sales_id int primary key
 ,amount decimal);
 
 insert into customer values
-(1,'�c��'), (2,'���'), (3,'�c��'), (4,'�c��');
+(1,田中'), (2,'鈴木'), (3,'田中'), (4,'田島');
 
 insert into sales values
 (1,'2018/11/01', '1', '3000'),
@@ -71,7 +71,7 @@ select sales_id, order_date, customer_id, amount
 from sales where amount > 0;
 
 select customer_id, customer_name
-from customer where customer_name != '�c��';
+from customer where customer_name != '田中';
 
 update sales
    set order_date = '2018/11/05', customer_id = 4
