@@ -79,4 +79,3 @@ update sales
  
 delete from sales
 where amount = null;
-
