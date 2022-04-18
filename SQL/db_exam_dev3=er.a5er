@@ -1,0 +1,134 @@
+﻿# A5:ER FORMAT:16
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.17.1 Copyright © 1997 - 2022 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=14
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=PostgreSQL
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=author
+LName=author
+Comment=
+TableOption=
+Page=Main
+Left=1550
+Top=600
+Field="id","id","integer","NOT NULL",0,"","",$FFFFFFFF,""
+Field="author_name","author_name","character varying(10)",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",1550,600
+ZOrder=-1
+
+[Entity]
+PName=books
+LName=books
+Comment=
+TableOption=
+Page=Main
+Left=150
+Top=200
+Field="book_id","book_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
+Field="book_name","book_name","character varying(10)",,,"","",$FFFFFFFF,""
+Field="teika","teika","integer",,,"","",$FFFFFFFF,""
+Field="publisher_date","publisher_date","character varying(10)",,,"","",$FFFFFFFF,""
+Field="publisher_id","publisher_id","integer",,,"","",$FFFFFFFF,""
+Field="author_id","author_id","integer",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",150,200,758,639
+ZOrder=-2
+
+[Entity]
+PName=publisher
+LName=publisher
+Comment=
+TableOption=
+Page=Main
+Left=1550
+Top=250
+Field="id","id","integer","NOT NULL",0,"","",$FFFFFFFF,""
+Field="publisher_name","publisher_name","character varying(10)",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",1550,250
+ZOrder=-3
+
+[Relation]
+Entity1=publisher
+Entity2=books
+RelationType1=2
+RelationType2=3
+Fields1=id
+Fields2=book_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1859,8141,1456,R,R,""
+Dependence=1
+Caption=
+PName=
+LineMode=0
+Bar1=186
+Bar2=814
+Bar3=146
+TermPos1=R
+TermPos2=R
+ZOrder=1
+
+[Relation]
+Entity1=author
+Entity2=books
+RelationType1=1
+RelationType2=3
+Fields1=id
+Fields2=publisher_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1859,8141,6605,R,R,""
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=186
+Bar2=814
+Bar3=660
+TermPos1=R
+TermPos2=R
+ZOrder=2
