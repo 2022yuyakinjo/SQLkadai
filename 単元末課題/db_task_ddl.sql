@@ -1,5 +1,5 @@
 
--- Á”ïÅƒe[ƒuƒ‹
+-- ï¿½ï¿½ï¿½ï¿½Åƒeï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table tax_table (
   tax_id integer not null
@@ -7,7 +7,7 @@ create table tax_table (
   , constraint tax_table_PKC primary key (tax_id)
 ) ;
 
--- ŒÂlƒe[ƒuƒ‹
+-- ï¿½Âlï¿½eï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table personal_table (
   id integer not null
@@ -16,7 +16,7 @@ create table personal_table (
   , constraint personal_table_PKC primary key (id)
 ) ;
 
--- x•¥ƒe[ƒuƒ‹
+-- ï¿½xï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table pay_table (
   id integer not null
@@ -26,7 +26,7 @@ create table pay_table (
   , constraint pay_table_PKC primary key (id)
 ) ;
 
--- ƒŒƒWƒe[ƒuƒ‹
+-- ï¿½ï¿½ï¿½Wï¿½eï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table casher_table (
   store_id integer not null
@@ -35,7 +35,7 @@ create table casher_table (
   , constraint casher_table_PKC primary key (store_id)
 ) ;
 
--- ¤•iƒe[ƒuƒ‹
+-- ï¿½ï¿½ï¿½iï¿½eï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table goods_table (
   goods_id integer not null
@@ -45,7 +45,7 @@ create table goods_table (
   , constraint goods_table_PKC primary key (goods_id)
 ) ;
 
--- “X•Üƒe[ƒuƒ‹
+-- ï¿½Xï¿½Üƒeï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table branch_table (
   store_id integer not null
@@ -57,39 +57,39 @@ create table branch_table (
   , constraint branch_table_PKC primary key (store_id)
 ) ;
 
-comment on table tax_table is 'Á”ïÅƒe[ƒuƒ‹';
-comment on column tax_table.tax_id is 'Á”ïÅID';
-comment on column tax_table.tax_persentage is 'Å—¦';
+comment on table tax_table is 'ï¿½ï¿½ï¿½ï¿½Åƒeï¿½[ï¿½uï¿½ï¿½';
+comment on column tax_table.tax_id is 'ï¿½ï¿½ï¿½ï¿½ï¿½ID';
+comment on column tax_table.tax_persentage is 'ï¿½Å—ï¿½';
 
-comment on table personal_table is 'ŒÂlƒe[ƒuƒ‹';
-comment on column personal_table.id is 'ŒÂlID';
-comment on column personal_table.goods_id is '¤•iID';
-comment on column personal_table.time is '“ú•t‚ÆŠÔ';
+comment on table personal_table is 'ï¿½Âlï¿½eï¿½[ï¿½uï¿½ï¿½';
+comment on column personal_table.id is 'ï¿½ÂlID';
+comment on column personal_table.goods_id is 'ï¿½ï¿½ï¿½iID';
+comment on column personal_table.time is 'ï¿½ï¿½ï¿½tï¿½Æï¿½ï¿½ï¿½';
 
-comment on table pay_table is 'x•¥ƒe[ƒuƒ‹';
-comment on column pay_table.id is 'ŒÂlID';
-comment on column pay_table."way to pay" is 'x•¥•û–@';
-comment on column pay_table."eat in" is 'ƒC[ƒgƒCƒ“';
-comment on column pay_table.nebiki is '’lˆø‚«';
+comment on table pay_table is 'ï¿½xï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½';
+comment on column pay_table.id is 'ï¿½ÂlID';
+comment on column pay_table."way to pay" is 'ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½@';
+comment on column pay_table."eat in" is 'ï¿½Cï¿½[ï¿½gï¿½Cï¿½ï¿½';
+comment on column pay_table.nebiki is 'ï¿½lï¿½ï¿½ï¿½ï¿½';
 
-comment on table casher_table is 'ƒŒƒWƒe[ƒuƒ‹';
-comment on column casher_table.store_id is '“X•ÜID';
-comment on column casher_table.casher_code is 'ƒŒƒW”Ô';
-comment on column casher_table.staff_number is 'Ó”CÒƒiƒ“ƒo[';
+comment on table casher_table is 'ï¿½ï¿½ï¿½Wï¿½eï¿½[ï¿½uï¿½ï¿½';
+comment on column casher_table.store_id is 'ï¿½Xï¿½ï¿½ID';
+comment on column casher_table.casher_code is 'ï¿½ï¿½ï¿½Wï¿½ï¿½';
+comment on column casher_table.staff_number is 'ï¿½Ó”Cï¿½Òƒiï¿½ï¿½ï¿½oï¿½[';
 
-comment on table goods_table is '¤•iƒe[ƒuƒ‹';
-comment on column goods_table.goods_id is '¤•iID';
-comment on column goods_table.goods_name is '¤•i–¼';
-comment on column goods_table.value is '‹àŠz';
-comment on column goods_table.tax_id is 'Á”ïÅID';
+comment on table goods_table is 'ï¿½ï¿½ï¿½iï¿½eï¿½[ï¿½uï¿½ï¿½';
+comment on column goods_table.goods_id is 'ï¿½ï¿½ï¿½iID';
+comment on column goods_table.goods_name is 'ï¿½ï¿½ï¿½iï¿½ï¿½';
+comment on column goods_table.value is 'ï¿½ï¿½ï¿½z';
+comment on column goods_table.tax_id is 'ï¿½ï¿½ï¿½ï¿½ï¿½ID';
 
-comment on table branch_table is '“X•Üƒe[ƒuƒ‹';
-comment on column branch_table.store_id is '“X•ÜID';
-comment on column branch_table.branch_name is '“X•Ü–¼';
-comment on column branch_table.address is 'ZŠ';
-comment on column branch_table.tel is '“d˜b”Ô†';
+comment on table branch_table is 'ï¿½Xï¿½Üƒeï¿½[ï¿½uï¿½ï¿½';
+comment on column branch_table.store_id is 'ï¿½Xï¿½ï¿½ID';
+comment on column branch_table.branch_name is 'ï¿½Xï¿½Ü–ï¿½';
+comment on column branch_table.address is 'ï¿½Zï¿½ï¿½';
+comment on column branch_table.tel is 'ï¿½dï¿½bï¿½Ôï¿½';
 comment on column branch_table.id is 'ID';
-comment on column branch_table.store_name is '“X–¼';
+comment on column branch_table.store_name is 'ï¿½Xï¿½ï¿½';
 
 
 drop table branch_table;

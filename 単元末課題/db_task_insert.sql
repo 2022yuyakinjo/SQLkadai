@@ -1,4 +1,4 @@
--- “X•Üƒe[ƒuƒ‹
+-- ï¿½Xï¿½Üƒeï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table branch_table (
   store_id integer not null
@@ -15,8 +15,8 @@ drop table branch_table;
 insert into branch_table
 values(
     1, 
-    '“ú–{‹´“X', 
-    '“Œ‹“s’†‰›‹æ', 
+    'ï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½X', 
+    'ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½', 
     '03-111-2222', 
     '2',
     'Lonely'
@@ -30,7 +30,7 @@ select * from branch_table;
 
 
 
--- ŒÂlƒe[ƒuƒ‹
+-- ï¿½Âlï¿½eï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table personal_table (
   id integer not null
@@ -43,14 +43,14 @@ insert into personal_table
 values(
     1,
     '1-1',
-    '2022”N4Œ1“úi‹àj19:00'
+    '2022ï¿½N4ï¿½ï¿½1ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½j19:00'
 );
 
 
 select * from personal_table;
 
 
--- x•¥ƒe[ƒuƒ‹
+-- ï¿½xï¿½ï¿½ï¿½eï¿½[ï¿½uï¿½ï¿½
 --* RestoreFromTempTable
 create table pay_table (
   id integer not null
