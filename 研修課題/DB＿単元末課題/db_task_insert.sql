@@ -1,4 +1,4 @@
--- �X�܃e�[�u��
+-- 店舗テーブル
 --* RestoreFromTempTable
 create table branch_table (
   store_id integer not null
@@ -10,17 +10,19 @@ create table branch_table (
   , constraint branch_table_PKC primary key (store_id)
 ) ;
 
-drop table branch_table;
+drop table    ;
 
 insert into branch_table
 values(
     1, 
-    '���{���X', 
-    '�����s������', 
+    '日本橋店', 
+    '東京都中央区日本橋1-1-1', 
     '03-111-2222', 
     '2',
     'Lonely'
 );
+
+delete from branch_table;
 
 select * from branch_table;
 
@@ -30,7 +32,7 @@ select * from branch_table;
 
 
 
--- �l�e�[�u��
+-- 商品テーブル
 --* RestoreFromTempTable
 create table personal_table (
   id integer not null
@@ -50,7 +52,7 @@ values(
 select * from personal_table;
 
 
--- �x���e�[�u��
+-- 支払テーブル
 --* RestoreFromTempTable
 create table pay_table (
   id integer not null

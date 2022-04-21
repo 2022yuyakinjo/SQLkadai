@@ -40,5 +40,22 @@ where customer_id = 1
 order by order_date desc
  limit 2;
  
- --8
- select 
+--8
+select order_date, sum(amount) as sum_amount from sales
+where order_date = (select min(order_date) from sales)
+group by order_date;
+                            
+
+select * from sales
+select * from customer
+
+-- 9
+select avg(customer_id),
+       customer_name,
+       trunc (avg(amount))as avg_amount
+from sales s
+join customer
+on s.customer_id 
+order by customer_id asc;
+
+--10

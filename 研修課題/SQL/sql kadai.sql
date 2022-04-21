@@ -12,23 +12,23 @@ student_id int primary key
 ,major_id int not null references major(major_id) );
 
 insert into major values
-(1, 'è‹±æ–‡å­¦'), (2, 'å¿œç”¨ç§‘å­¦'), (3, 'æƒ…å ±å·¥å­¦'), (4, 'çµŒæ¸ˆå­¦'), (5, 'å›½éš›æ–‡åŒ–');
+(1, '‰p•¶Šw'), (2, '‰ž—p‰ÈŠw'), (3, 'î•ñHŠw'), (4, 'ŒoÏŠw'), (5, '‘Û•¶‰»');
 
 insert into student values
-(1,'å±±ç”°', '1', 'å®®åŸŽ','1'),
-(2,'ç”°ä¸­', '1', 'æ±äº¬','2'),
-(3,'ä½è—¤', '1', 'æ±äº¬', '3'),
-(4,'éˆ´æœ¨', '2', 'é¹¿å…å³¶', '1'),
-(5,'é«˜æ©‹', '2', 'åŒ—æµ·é“', '2'
-(6,'å‰ç”°', '2', 'æ±äº¬','1'),
-(7,'ä¼Šè—¤', '3', 'é¹¿å…å³¶', '2'),
-(8,'å±±æœ¬', '3', 'ç¥žå¥ˆå·', '3'),
-(9,'æ£®æœ¬', '4', 'æ²–ç¸„', '4'),
-(10,'å‰å²¡', '4', 'ç¥žå¥ˆå·', '5');
+(1,'ŽR“c', '1', '‹{é','1'),
+(2,'“c’†', '1', '“Œ‹ž','2'),
+(3,'²“¡', '1', '“Œ‹ž', '3'),
+(4,'—é–Ø', '2', 'Ž­Ž™“‡', '1'),
+(5,'‚‹´', '2', '–kŠC“¹', '2'),
+(6,'‹g“c', '2', '“Œ‹ž','1'),
+(7,'ˆÉ“¡', '3', 'Ž­Ž™“‡', '2'),
+(8,'ŽR–{', '3', '_“Þì', '3'),
+(9,'X–{', '4', '‰«“ê', '4'),
+(10,'‹g‰ª', '4', '_“Þì', '5');
 
 select * from student where grade=1;
 
-select * from student where hometown='æ±äº¬';
+select * from student where hometown='“Œ‹ž';
 
 select major_name from major;
 
@@ -51,7 +51,7 @@ sales_id int primary key
 ,amount decimal);
 
 insert into customer values
-(1,ç”°ä¸­'), (2,'éˆ´æœ¨'), (3,'ç”°ä¸­'), (4,'ç”°å³¶');
+(1,'“c’†'), (2,'—é–Ø'), (3,'“c’†'), (4,'“c“‡');
 
 insert into sales values
 (1,'2018/11/01', '1', '3000'),
@@ -71,7 +71,7 @@ select sales_id, order_date, customer_id, amount
 from sales where amount > 0;
 
 select customer_id, customer_name
-from customer where customer_name != 'ç”°ä¸­';
+from customer where customer_name != '“c’†';
 
 update sales
    set order_date = '2018/11/05', customer_id = 4
@@ -79,3 +79,5 @@ update sales
  
 delete from sales
 where amount = null;
+
+
